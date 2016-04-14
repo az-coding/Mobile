@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<body>
+
+<nav class="w3-sidenav w3-white" style="display:none">
+  <a href="javascript:void(0)" 
+  onclick="w3_close()"
+  class="w3-closenav w3-large">Close &times;</a>
+
+  
+  
+  
+  
+    <a href="index.html">Index</a>		
+  <a href="contact.html">Contact</a>			
+  <a href="about.html">About</a>
+<a href="vibe2.html">Vibe2</a>  
+<a href="ractive.html">ractive</a>
+<a href="gps.html">gps</a>
+<a href="slider.html">Slider</a>
+<br/>
+<p>Basic Code</p>
+<a href="vibe.html">Vibe</a>  
+<a href="ractivecsstest3.html">ractivecsstest3</a>
+
+
+ 
+</nav>
+
+<header class="w3-container w3-teal">
+    <span class="w3-opennav w3-xlarge" onclick="w3_open()">&#9776;</span>    
+  <h1>Index</h1>
+</header>
+
+  <div data-role="main" class="ui-content">
+  
+  <h2>Slider</h2>
+   
+   <p>This code will help you to create a slider, you can see an example below the code.</p>
+   
+   <p> http://www.freebits.co.uk/convert-html-code-to-text.html<br /><br />
+   &lt;form method="post" action="demoform.asp"&gt;<br />
+      &lt;label for="points"&gt;Points:&lt;/label&gt;<br />
+      &lt;input type="range" name="points" id="points" value="50" min="0" max="100"&gt;<br />
+      &lt;input type="submit" data-inline="true" value="Submit"&gt;<br />
+    &lt;/form&gt;<br />
+	</p>
+   
+   <form method="post" action="demoform.asp">
+      <label for="points">Points:</label>
+      <input type="range" name="points" id="points" value="50" min="0" max="100">
+      <input type="submit" data-inline="true" value="Submit">
+    </form>
+  </div>
+
+
+
+<footer class="w3-container w3-teal">
+  <h5>Footer</h5>
+  <p>Footer information goes here</p>
+</footer>
+     
+<script>
+function w3_open() {
+    document.getElementsByClassName("w3-sidenav")[0].style.width = "100%";
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+}
+function w3_close() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+}
+</script>
+     
+</body>
+</html> 

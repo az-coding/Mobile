@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1.0,user-scalable=no">
+
+    <title>HTML5 Vibration</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<nav class="w3-sidenav w3-white" style="display:none">
+  <a href="javascript:void(0)" 
+  onclick="w3_close()"
+  class="w3-closenav w3-large">Close &times;</a>
+  
+  
+  
+     <a href="index.html">Index</a>		
+  <a href="contact.html">Contact</a>			
+  <a href="about.html">About</a>
+<a href="vibe2.html">Vibe2</a>  
+<a href="ractive.html">ractive</a>
+<a href="gps.html">gps</a>
+<a href="slider.html">Slider</a>
+<br/>
+<p>Basic Code</p>
+<a href="vibe.html">Vibe</a>  
+<a href="ractivecsstest3.html">ractivecsstest3</a>
+
+
+ 
+</nav>
+
+<header class="w3-container w3-teal">
+    <span class="w3-opennav w3-xlarge" onclick="w3_open()">&#9776;</span>    
+  <h1>Vibe 2</h1>
+</header>
+
+<div class="container-fluid">
+        <div class="page-header">
+            <h1>HTML5 Vibration Tutorial</h1>
+        </div>
+
+        <div id="unsupported">
+            <p>Your browser does not support the Vibration API.</p>
+        </div>
+<!--
+        <div id="supported" class="row">
+            <div class="col-xs-12 col-sm-6">
+                <button id="one" type="button" class="btn btn-primary btn-lg btn-block">One Second Vibration</button>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <button id="pattern" type="button" class="btn btn-info btn-lg btn-block">Vibration Pattern</button>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <button id="ten" type="button" class="btn btn-warning btn-lg btn-block">10 Second Vibration</button>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <button id="stop" type="button" class="btn btn-danger btn-lg btn-block">Stop All Vibrations</button>
+            </div>
+        </div>
+-->
+
+<div id="supported" class="row">
+            <div>
+                <button id="one" type="button" class="btn btn-primary btn-lg btn-block">One Second Vibration</button>
+            </div>
+			<br/>
+            <div>
+                <button id="pattern" type="button" class="btn btn-info btn-lg btn-block">Vibration Pattern</button>
+            </div>
+			<br/>
+            <div>
+                <button id="ten" type="button" class="btn btn-warning btn-lg btn-block">10 Second Vibration</button>
+            </div>
+			<br/>
+            <div>
+                <button id="stop" type="button" class="btn btn-danger btn-lg btn-block">Stop All Vibrations</button>
+            </div>
+			<br/>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+            // Determine if vibration is supported in this web browser
+            if (!navigator.vibrate) {
+                $('#supported').hide();
+                return;
+            }
+            $('#unsupported').hide();
+            // One second vibration
+            $('#one').click(function () {
+                navigator.vibrate(1000);
+            });
+            // Vibration pattern
+            $('#pattern').click(function () {
+                navigator.vibrate([500, 100, 250, 100, 1000]);
+            });
+            // 10 second vibration
+            $('#ten').click(function () {
+                navigator.vibrate(10000);
+            });
+            // Stop all vibrations
+            $('#stop').click(function () {
+                navigator.vibrate(0);
+            });
+        });
+    </script>
+
+
+
+<footer class="w3-container w3-teal">
+  <h5>Footer</h5>
+  <p>Footer information goes here</p>
+</footer>
+     
+<script>
+function w3_open() {
+    document.getElementsByClassName("w3-sidenav")[0].style.width = "100%";
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+}
+function w3_close() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+}
+</script>
+     
+</body>
+</html> 

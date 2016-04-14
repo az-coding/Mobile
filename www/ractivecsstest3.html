@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang='en-GB'>
+	<head>
+		<meta charset='utf-8'>
+		<title>Ractive test</title>
+		<script src="http://cdn.ractivejs.org/latest/ractive.min.js"></script>
+	</head>
+	<body>
+		<p id="test"></p>
+		<script>
+			var ractive = new Ractive({
+				el: '#test',
+				template: '<p style="font-size: {{content}}px;"><label>Enter text size:<input style="font-size: {{content}}px;" value="{{content}}">px</label><br/>This is a normal double mustache: <u>"{{content}}"</u> it displays what is in content.<br/>And this is a triple mustache: <u>"{{{content}}}"</u> it executes code in content.</p>',
+				data: {
+					content: '15'
+				}
+			});
+		</script>
+	</body>
+</html>
+
+
+
+<!--
+<style>p {font-size: {{content}}px;}</style>
+<label>Enter text size:<input value='{{content}}'></label>
+<p>This is a normal double mustache: <u>{{content}}</u> it displays what is in content.</p>
+<p>And this is a triple mustache: <u>{{{content}}}</u> it executes code in content.</p>
+
+var ractive = new Ractive({
+  el: output,
+  template: template,
+  data: {
+    content: '15px'
+  }
+});
+-->

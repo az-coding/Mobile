@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<style>
+.ui-content {min-height:81.5vh;}
+#myPanel {background: #ccc; text-align:center;}
+#myPanel a:link {text-decoration: none;}
+.checked {border: solid 1px black; padding: 10px 1px; width:100%;background: green; text-align:center; border-radius:10px;}
+.unchecked {border: solid 1px black; padding: 10px 1px; width:100%; text-align:center; border-radius:10px;}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="panel" id="myPanel"> 
+    <h2>Main Menu</h2>
+	
+    <a href="index.html"><div class="unchecked">Home</div></a><br/>
+	
+	<a href="slider.html"><div class="unchecked">Slider Example</div></a><br/>
+	<a href="slider.html"><div class="unchecked">Slider Example</div></a><br/>
+	<a href="slider.html"><div class="checked">Slider Example</div></a><br/>
+	<a href="slider.html"><div class="checked">Slider Example</div></a><br/>
+  </div> 
+
+  <div data-role="header">
+  <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Menu</a>
+    <h1>HACE</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>Welcome to HACE we will provide you with all the Coding Examples you need for creating your very own Hybrid Application. Create an <a href="about.html">Account</a> to keep track of your progress. For those of you who would like to know more of what HACE is then check the <a href="about.html">About</a> us page. Alternatively if you would like to provide HACE with feedback or have any problems feel free to <a href="contact.html">Contact</a> us.
+  </div>
+
+  <div data-role="footer">
+    <h1>Created by Aaron Seymour</h1>
+  </div> 
+</div> 
+
+</body>
+</html>
