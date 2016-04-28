@@ -16,6 +16,9 @@
     <author href="https://github.com/az-coding/Mobile.git" email="aaronseymour1989@gmail.com">
         Aaron Seymour 
     </author>
+	<preference name="phonegap-version" value="3.7.0"/>
+	<preference name="andriod"/>
+	
 	
 	<plugin name="org.apache.cordova.vibration" spec="0.3.13" source="pgb" />
 	<plugin name="org.apache.cordova.geolocation" spec="0.3.12" source="pgb" />
