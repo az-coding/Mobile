@@ -6,7 +6,8 @@
 		<script src="http://cdn.ractivejs.org/latest/ractive.min.js"></script>
 	</head>
 	<body>
-		<p id="test"><label>Enter text size:<input style="font-size: {{content}}px;" value="{{content}}">px</label></p>
+		<p id="test"></p>
+		<label>Enter text size:<input style="font-size: {{content}}px;" value="{{content}}">px</label>
 		<script>
 			var ractive = new Ractive({
 				el: '#test',
