@@ -17,7 +17,7 @@
         Aaron Seymour 
     </author>
 	<preference name="phonegap-version" value="3.7.0"/>
-	<preference name="andriod"/>
+	<preference name="android"/>
 	
 	
 	<plugin name="org.apache.cordova.vibration" spec="0.3.13" source="pgb" />
