@@ -1,94 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>HACE</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1.0,user-scalable=no">
-
-    <title>HTML5 Vibration</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <style>
-  			.checked {border: solid 1px black; padding: 10px 1px; width:100%;background: green; text-align:center; border-radius:10px;}
-			.unchecked {border: solid 1px black; padding: 10px 1px; width:100%; text-align:center; border-radius:10px;}
-		</style>
+<script src="http://cdn.ractivejs.org/latest/ractive.min.js"></script>
+<style>
+*{
+padding: 0px;
+margin:0px;
+}
+header {
+background:#009688; 
+color:#FFFFFF; 
+padding:10px;
+}
+a {color:#FFFFFF}
+button.accordion {
+margin:0px;
+background-color: #eee;
+color: #444;
+padding: 0px;
+width: 100%;
+font-size: 2em;  
+}
+.menuLink {
+padding-top:10px;
+font-size:2em;
+text-align:center;
+}
+div.panel {
+padding: 15px;
+display: none;
+}
+div.panel.show {
+display: block !important;
+//text-align:center;
+}
+.container {
+padding:10px; 
+min-height:30vh;
+}
+footer {
+padding:10px;
+background:#009688; 
+color:#FFFFFF; 
+}
+</style>
 </head>
-
 <body>
+<header>  
+<button class="accordion">Menu</button>
+<div class="panel">
+<a href="index.html"><div class="menuLink">Index</div></a><br/>
+<a href="vibration.html"><div class="menuLink">Vibration</div></a><br/>
+<a href="ractive.html"><div class="menuLink">Ractive</div></a><br/>
+<a href="gps.html"><div class="menuLink">GPS</div></a><br/>
+<a href="slider.html"><div class="menuLink">Slider</div></a><br/> 
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-<nav class="w3-sidenav w3-white" style="display:none">
-  <a href="javascript:void(0)" 
-  onclick="w3_close()"
-  class="w3-closenav w3-large">Close &times;</a>
-  
-  	<a href="index.html"><div class="unchecked">Index</div></a><br/>
-	<a href="vibration.html"><div class="unchecked">Vibration</div></a><br/>
-	<a href="ractive.html"><div class="unchecked">Ractive</div></a><br/>
-	<a href="gps.html"><div class="unchecked">GPS</div></a><br/>
-	<a href="slider.html"><div class="unchecked">Slider</div></a><br/>
-	
- 
-</nav>
-
-<header class="w3-container w3-teal">
-    <span class="w3-opennav w3-xlarge" onclick="w3_open()">&#9776;</span>    
-  <h1>HACE</h1>
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+</script>	
+<h1>Home</h1>
 </header>
-
-<div class="container-fluid">
-        <div class="page-header">
-            <h1>HTML5 Vibration Tutorial</h1>
-        </div>
-
-        <div id="unsupported">
-            <p>Your browser does not support the Vibration API.</p>
-        </div>
-<!--
-        <div id="supported" class="row">
-            <div class="col-xs-12 col-sm-6">
-                <button id="one" type="button" class="btn btn-primary btn-lg btn-block">One Second Vibration</button>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <button id="pattern" type="button" class="btn btn-info btn-lg btn-block">Vibration Pattern</button>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <button id="ten" type="button" class="btn btn-warning btn-lg btn-block">10 Second Vibration</button>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <button id="stop" type="button" class="btn btn-danger btn-lg btn-block">Stop All Vibrations</button>
-            </div>
-        </div>
--->
-
-<div id="supported" class="row">
-            <div>
-                <button id="one" type="button" class="btn btn-primary btn-lg btn-block">One Second Vibration</button>
-            </div>
-			<br/>
-            <div>
-                <button id="pattern" type="button" class="btn btn-info btn-lg btn-block">Vibration Pattern</button>
-            </div>
-			<br/>
-            <div>
-                <button id="ten" type="button" class="btn btn-warning btn-lg btn-block">10 Second Vibration</button>
-            </div>
-			<br/>
-            <div>
-                <button id="stop" type="button" class="btn btn-danger btn-lg btn-block">Stop All Vibrations</button>
-            </div>
-			<br/>
-        </div>
-    </div>
-
-    <script>
+<div class="container">
+<button id="one" type="button" class="btn btn-primary btn-lg btn-block">One Second Vibration</button>
+<br/>
+<button id="pattern" type="button" class="btn btn-info btn-lg btn-block">Vibration Pattern</button> 
+<br/>
+<button id="ten" type="button" class="btn btn-warning btn-lg btn-block">10 Second Vibration</button>
+<br/>
+<button id="stop" type="button" class="btn btn-danger btn-lg btn-block">Stop All Vibrations</button>
+<br/>
+ <script>
         $(document).ready(function () {
             navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
             // Determine if vibration is supported in this web browser
@@ -114,24 +105,11 @@
                 navigator.vibrate(0);
             });
         });
-    </script>
-
-
-
-<footer class="w3-container w3-teal">
-  <h5>HACE</h5>
-  <p>Created By Aaron Seymour</p>
-</footer>
-     
-<script>
-function w3_open() {
-    document.getElementsByClassName("w3-sidenav")[0].style.width = "100%";
-    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
-}
-function w3_close() {
-    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
-}
 </script>
-     
+</div>
+<footer>
+<h5>HACE</h5>
+<p>Created By Aaron Seymour</p>
+</footer>   
 </body>
 </html> 
