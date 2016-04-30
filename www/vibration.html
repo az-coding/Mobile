@@ -68,17 +68,16 @@ for (i = 0; i < acc.length; i++) {
   }
 }
 </script>	
-<h1>Home</h1>
+<h1>Vibration</h1>
 </header>
 <div class="container">
-<button id="one" type="button" class="btn btn-primary btn-lg btn-block">One Second Vibration</button>
+<button id="one" type="button">One Second Vibration</button>
 <br/>
-<button id="pattern" type="button" class="btn btn-info btn-lg btn-block">Vibration Pattern</button> 
+<button id="pattern">Vibration Pattern</button> 
 <br/>
-<button id="ten" type="button" class="btn btn-warning btn-lg btn-block">10 Second Vibration</button>
+<button id="ten" type="button">10 Second Vibration</button>
 <br/>
-<button id="stop" type="button" class="btn btn-danger btn-lg btn-block">Stop All Vibrations</button>
-<br/>
+<button id="stop" type="button">Stop All Vibrations</button>
  <script>
         $(document).ready(function () {
             navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
