@@ -29,16 +29,14 @@ for (i = 0; i < acc.length; i++) {
 <h1>GPS</h1>
 </header>
 <div class="container">
-
+<p>Description</p>
+<p>Code</p>
+<p>Example Below</p>
 <p id="demo">Click the button to get your position.</p>
-
 <button onclick="getLocation()">Try It</button>
-
 <div id="mapholder"></div>
-
 <script>
 var x = document.getElementById("demo");
-
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -46,15 +44,12 @@ function getLocation() {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
-
 function showPosition(position) {
     var latlon = position.coords.latitude + "," + position.coords.longitude;
-
     var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
     +latlon+"&zoom=14&size=250x250&sensor=false";
     document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
 }
-
 function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
@@ -72,15 +67,10 @@ function showError(error) {
     }
 }
 </script>
-
-
 </div>
-
 <footer>
-  <h5>HACE</h5>
-  <p>Created By Aaron Seymour</p>
+<h5>HACE</h5>
+<p>Created By Aaron Seymour</p>
 </footer>
-     
-     
 </body>
 </html> 
