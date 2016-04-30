@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>HACE</title>
+<head>
+<title>HACE</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <style>
-
 *{
 padding: 0px;
 margin:0px;
 }
-
-
+header {
+background:#009688; 
+color:#FFFFFF; 
+padding:10px;
+}
+a {color:#FFFFFF}
 button.accordion {
-	margin:0px;
-    background-color: #eee;
-    color: #444;
-    padding: 0px;
-    width: 100%;
-    font-size: 15px;  
-    
+margin:0px;
+background-color: #eee;
+color: #444;
+padding: 0px;
+width: 100%;
+font-size: 2em;  
+}
+.menuLink {
+padding-top:10px;
+font-size:2em;
+text-align:center;
 }
 div.panel {
-    padding: 15px;
-    display: none;
+padding: 15px;
+display: none;
 }
 div.panel.show {
-    display: block !important;
+display: block !important;
+//text-align:center;
+}
+.container {
+padding:10px; 
+min-height:30vh;
+}
+footer {
+padding:10px;
+background:#009688; 
+color:#FFFFFF; 
 }
 </style>
-
-	</head>
-
+</head>
 <body>
-
-
-
-<header class="w3-container w3-teal">
-     <button class="accordion">Menu</button>
+<header>  
+<button class="accordion">Menu</button>
 <div class="panel">
-	<a href="index.html"><div class="unchecked">Index</div></a><br/>
-  	<a href="contact.html"><div class="unchecked">Contact</div></a><br/>
-  	<a href="about.html"><div class="unchecked">About</div></a><br/>
-	<a href="vibration.html"><div class="unchecked">Vibration</div></a><br/>
-	<a href="ractive.html"><div class="unchecked">Ractive</div></a><br/>
-	<a href="gps.html"><div class="unchecked">GPS</div></a><br/>
-	<a href="slider.html"><div class="unchecked">Slider</div></a><br/> 
- </div>
-	<script>
+<a href="index.html"><div class="menuLink">Index</div></a><br/>
+<a href="contact.html"><div class="menuLink">Contact</div></a><br/>
+<a href="about.html"><div class="menuLink">About</div></a><br/>
+<a href="vibration.html"><div class="menuLink">Vibration</div></a><br/>
+<a href="ractive.html"><div class="menuLink">Ractive</div></a><br/>
+<a href="gps.html"><div class="menuLink">GPS</div></a><br/>
+<a href="slider.html"><div class="menuLink">Slider</div></a><br/> 
+</div>
+<script>
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -58,22 +69,15 @@ for (i = 0; i < acc.length; i++) {
   }
 }
 </script>	
-  <h1>About</h1>
+<h1>About</h1>
 </header>
-
-
-
-<div class="w3-container">
+<div class="container">
 <p>About</p>
-  <p>In this example, the sidenav is hidden (style="display:none") and is only shown when you click on the menu icon in the top left corner. When it is opened, it hides the page content (it lays on top of it (100% width and height)).</p>
+<p>About us lalalalala</p>
 </div>
-
-<footer class="w3-container w3-teal">
-  <h5>HACE</h5>
-  <p>Created By Aaron Seymour</p>
+<footer>
+<h5>HACE</h5>
+<p>Created By Aaron Seymour</p>
 </footer>
-     
-
-     
 </body>
 </html> 
