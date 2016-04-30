@@ -31,6 +31,7 @@ text-align:center;
 .vibrationButton {
 width:100%;
 font-size: 2em;
+margin: 0.5em 0em;
 }
 div.panel {
 padding: 15px;
@@ -75,13 +76,13 @@ for (i = 0; i < acc.length; i++) {
 <h1>Vibration</h1>
 </header>
 <div class="container">
-<button id="one" class="vibrationButton">One Second Vibration</button>
-<br/>
-<button id="pattern" class="vibrationButton">Vibration Pattern</button> 
-<br/>
-<button id="ten" class="vibrationButton">10 Second Vibration</button>
-<br/>
-<button id="stop" class="vibrationButton">Stop All Vibrations</button>
+<p>Description</p>
+<p>Code</p>
+<p>Example Below</p>
+<button id="one" class="vibrationButton">One Second Vibration</button><br/>
+<button id="pattern" class="vibrationButton">Vibration Pattern</button><br/>
+<button id="ten" class="vibrationButton">10 Second Vibration</button><br/>
+<button id="stop" class="vibrationButton">Stop All Vibrations</button><br/>
  <script>
         $(document).ready(function () {
             navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
