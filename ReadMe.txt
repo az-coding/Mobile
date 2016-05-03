@@ -1,1 +1,1 @@
-I only have an Andriod phone to test on so I have omly built for Andriod
+I only have an Android phone to test on, so I have only built for Android.
