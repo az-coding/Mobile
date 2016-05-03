@@ -39,7 +39,7 @@ font-size:1.5em;
 text-align:center;
 }
 .vibrationButton {
-width:90%;
+width:100%;
 float:center;
 font-size:1.5em;
 margin:1em 0em;
@@ -55,7 +55,7 @@ display: block !important;
 }
 .container {
 padding:2%; 
-min-height:60vh;
+min-height:65vh;
 width:96%;
 }
 footer {
