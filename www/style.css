@@ -7,6 +7,9 @@ background:#009688;
 color:#FFFFFF; 
 padding:10px;
 }
+p {font-size:1em;}
+h1 {font-size:2em;}
+h5 {font-size:1.5em;}
 a {color:#FFFFFF}
 button.accordion {
 margin:0px;
