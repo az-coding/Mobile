@@ -1,6 +1,6 @@
 *{
-padding: 0px;
-margin:0px;
+padding: 0em;
+margin:0em;
 font-family:arial;
 font-size:1em;
 }
@@ -26,10 +26,10 @@ a .websiteLink {
 color:#EEEEEE;
 }
 button.accordion {
-margin:0px;
+margin:0em;
 background-color:#EEEEEE;
 color:#444;
-padding:0px;
+padding:0em;
 width:100%;
 font-size:2em;
 }
@@ -40,8 +40,9 @@ text-align:center;
 }
 .vibrationButton {
 width:100%;
-font-size: 2em;
-margin: 0.5em 0em;
+font-size:2em;
+margin-top:0.5em 0em;
+padding:0em;
 }
 div.panel {
 padding: 15px;
