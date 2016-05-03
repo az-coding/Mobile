@@ -51,8 +51,8 @@ display: block !important;
 //text-align:center;
 }
 .container {
-padding:10px; 
-min-height:30vh;
+padding:1%; 
+min-height:60vh;
 width:100%;
 }
 footer {
