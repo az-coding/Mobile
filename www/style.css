@@ -8,19 +8,26 @@ header {
 background:#009688; 
 color:#FFFFFF; 
 padding:10px;
-width:100%;
 }
-p {font-size:1em;}
-h1 {font-size:2em;}
-h5 {font-size:1.5em;}
-a {color:#FFFFFF}
+p {
+font-size:1em;
+}
+h1 {
+font-size:2em;
+}
+h5 {
+font-size:1.5em;
+}
+a {
+color:#FFFFFF
+}
 button.accordion {
 margin:0px;
-background-color: #eee;
-color: #444;
-padding: 0px;
-width: 90%;
-font-size: 2em;  
+background-color:#EEEEEE;
+color:#444;
+padding:0px;
+width:100%;
+font-size:2em;
 }
 .menuLink {
 padding-top:10px;
