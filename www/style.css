@@ -7,7 +7,7 @@ font-size:1em;
 header {
 background:#009688; 
 color:#FFFFFF; 
-padding:10px;
+padding:5%;
 }
 p {
 font-size:1em;
@@ -51,12 +51,12 @@ display: block !important;
 //text-align:center;
 }
 .container {
-padding:1%; 
+padding:2%; 
 min-height:60vh;
 width:100%;
 }
 footer {
-padding:10px;
+padding:5%;
 background:#009688; 
 color:#FFFFFF; 
 width:100%;
