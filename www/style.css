@@ -8,6 +8,7 @@ header {
 background:#009688; 
 color:#FFFFFF; 
 padding:5%;
+min-height:20vh;
 }
 p {
 font-size:1em;
@@ -60,4 +61,5 @@ padding:5%;
 background:#009688; 
 color:#FFFFFF; 
 width:100%;
+min-height:10vh;
 }
