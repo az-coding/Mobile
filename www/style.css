@@ -40,9 +40,11 @@ display: block !important;
 }
 .container {
 padding:10px; 
-min-height:30vh;
+min-height:90vh;
 }
 footer {
 padding:10px;
 background:#009688; 
 color:#FFFFFF; 
+position:absolute;
+}
