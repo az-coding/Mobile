@@ -57,6 +57,7 @@ display: block !important;
 padding:2%; 
 min-height:65vh;
 width:96%;
+max-width:69%;
 }
 footer {
 padding:5%;
