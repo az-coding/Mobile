@@ -23,7 +23,7 @@ a {
 color:#FFFFFF
 }
 .websiteLink {
-color:#EEEEEE;
+color:#009688;
 }
 button.accordion {
 margin:0em;
@@ -56,7 +56,7 @@ display: block !important;
 .container {
 padding:2%; 
 min-height:60vh;
-width:100%;
+width:96%;
 }
 footer {
 padding:5%;
