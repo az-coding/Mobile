@@ -34,7 +34,23 @@ for (i = 0; i < acc.length; i++) {
 	<h2>Description</h2>
 <p>This page provides you with a demonstration of ractive.js and how to code this example. Type a number into the input field and watch the size of the text change.</p><br/>
 <h2>Code</h2>
-
+&lt;script id="myTemplate" type="ractive"&gt;<br />
+	&lt;p style="font-size: {{content}}px;"&gt;<br />
+		This is a double mustache: &lt;u&gt;"{{content}}"&lt;/u&gt; it displays what is in content.&lt;br/&gt;<br />
+		This is a triple mustache: &lt;u&gt;"{{{content}}}"&lt;/u&gt; it executes code in content.<br />
+	&lt;/p&gt;<br />
+	&lt;p&gt;&lt;label&gt;Enter text size:&lt;input value="{{content}}"&gt;px&lt;/label&gt;&lt;/p&gt;<br />
+&lt;/script&gt;<br />
+&lt;p id="myElement"&gt;&lt;/p&gt;<br />
+		&lt;script&gt;<br />
+			var ractive = new Ractive({<br />
+				el: '#myElement',<br />
+				template: '#myTemplate',<br />
+				data: {<br />
+					content: '10'<br />
+				}<br />
+			});<br />
+		&lt;/script&gt;
 <!-- Code taken and adapted from http://www.ractivejs.org/ --> 
 <h2>Example</h2>
 <script id="myTemplate" type="ractive">
