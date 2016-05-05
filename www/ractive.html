@@ -1,80 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>HACE</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="http://cdn.ractivejs.org/latest/ractive.min.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
+    <title>HACE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://cdn.ractivejs.org/latest/ractive.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<header>  
-<button class="accordion">Menu</button>
-<div class="panel">
-<a href="index.html"><div class="menuLink">Home</div></a><br/>
-<a href="slider.html"><div class="menuLink">Slider</div></a><br/>
-<a href="gps.html"><div class="menuLink">GPS</div></a><br/>
-<a href="vibration.html"><div class="menuLink">Vibration</div></a><br/>
-<a href="ractive.html"><div class="menuLink">Ractive</div></a><br/>
-</div>
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
+    <header>  
+        <button class="accordion">Menu</button>
+        <div class="panel">
+            <a href="index.html"><div class="menuLink">Home</div></a><br/>
+            <a href="slider.html"><div class="menuLink">Slider</div></a><br/>
+            <a href="gps.html"><div class="menuLink">GPS</div></a><br/>
+            <a href="vibration.html"><div class="menuLink">Vibration</div></a><br/>
+            <a href="ractive.html"><div class="menuLink">Ractive</div></a><br/>
+        </div>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
-  }
-}
-</script>
-<br/><br/>
-<h1>HACE - Ractive</h1>
-</header>
-<div class="container">
-	<h2>Description</h2>
-<p>This page provides you with a demonstration of ractive.js and how to code this example. Type a number into the input field and watch the size of the text change.</p><br/>
-<h2>Code</h2>
-&lt;script id="myTemplate" type="ractive"&gt;<br />
-	&lt;p style="font-size: {{content}}px;"&gt;<br />
-		This is a double mustache: &lt;u&gt;"{{content}}"&lt;/u&gt; it displays what is in content.&lt;br/&gt;<br />
-		This is a triple mustache: &lt;u&gt;"{{{content}}}"&lt;/u&gt; it executes code in content.<br />
-	&lt;/p&gt;<br />
-	&lt;p&gt;&lt;label&gt;Enter text size:&lt;input value="{{content}}"&gt;px&lt;/label&gt;&lt;/p&gt;<br />
-&lt;/script&gt;<br />
-&lt;p id="myElement"&gt;&lt;/p&gt;<br />
-		&lt;script&gt;<br />
-			var ractive = new Ractive({<br />
-				el: '#myElement',<br />
-				template: '#myTemplate',<br />
-				data: {<br />
-					content: '17'<br />
-				}<br />
-			});<br />
-		&lt;/script&gt;
-<!-- Code taken and adapted from http://www.ractivejs.org/ --> 
-<br/><br/>
-<h2>Example</h2>
-<script id="myTemplate" type="ractive">
-	<p style="font-size: {{content}}px;">
-		This is a double mustache: <u>"{{content}}"</u> it displays what is in content.<br/>
-		This is a triple mustache: <u>"{{{content}}}"</u> it executes code in content.
-	</p>
-	<p><label>Enter text size:<input value="{{content}}">px</label></p>
-</script>
-<p id="myElement"></p>
-		<script>
-			var ractive = new Ractive({
-				el: '#myElement',
-				template: '#myTemplate',
-				data: {
-					content: '17'
-				}
-			});
-		</script>
-</div>
-<footer>
-	<h5>HACE</h5>
-	<p>Created By Aaron Seymour</p>
-</footer>
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function(){
+                    this.classList.toggle("active");
+                    this.nextElementSibling.classList.toggle("show");
+                }
+            }
+        </script>
+        <br/><br/>
+        <h1>HACE - Ractive</h1>
+    </header>
+    <div class="container">
+        <h2>Description</h2>
+        <p>This page provides you with a demonstration of ractive.js and how to code this example. Type a number into the input field and watch the size of the text change.</p><br/>
+        <h2>Code</h2>
+        &lt;script id="myTemplate" type="ractive"&gt;<br />
+        &lt;p style="font-size: {{content}}px;"&gt;<br />
+        This is a double mustache: &lt;u&gt;"{{content}}"&lt;/u&gt; it displays what is in content.&lt;br/&gt;<br />
+        This is a triple mustache: &lt;u&gt;"{{{content}}}"&lt;/u&gt; it executes code in content.<br />
+        &lt;/p&gt;<br />
+        &lt;p&gt;&lt;label&gt;Enter text size:&lt;input value="{{content}}"&gt;px&lt;/label&gt;&lt;/p&gt;<br />
+        &lt;/script&gt;<br />
+        &lt;p id="myElement"&gt;&lt;/p&gt;<br />
+        &lt;script&gt;<br />
+        var ractive = new Ractive({<br />
+        el: '#myElement',<br />
+        template: '#myTemplate',<br />
+        data: {<br />
+        content: '17'<br />
+        }<br />
+        });<br />
+        &lt;/script&gt;
+        <!-- Code taken and adapted from http://www.ractivejs.org/ --> 
+        <br/><br/>
+        <h2>Example</h2>
+        <script id="myTemplate" type="ractive">
+            <p style="font-size: {{content}}px;">
+                This is a double mustache: <u>"{{content}}"</u> it displays what is in content.<br/>
+                This is a triple mustache: <u>"{{{content}}}"</u> it executes code in content.
+            </p>
+            <p><label>Enter text size:<input value="{{content}}">px</label></p>
+        </script>
+        <p id="myElement"></p>
+        <script>
+            var ractive = new Ractive({
+                el: '#myElement',
+                template: '#myTemplate',
+                data: {
+                    content: '17'
+                }
+            });
+        </script>
+    </div>
+    <footer>
+        <h5>HACE</h5>
+        <p>Created By Aaron Seymour</p>
+    </footer>
 </body>
 </html> 
