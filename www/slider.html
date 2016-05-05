@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>HACE</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
+    <title>HACE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<header>  
-<button class="accordion">Menu</button>
-<div class="panel">
-<a href="index.html"><div class="menuLink">Home</div></a><br/>
-<a href="slider.html"><div class="menuLink">Slider</div></a><br/>
-<a href="gps.html"><div class="menuLink">GPS</div></a><br/>
-<a href="vibration.html"><div class="menuLink">Vibration</div></a><br/>
-<a href="ractive.html"><div class="menuLink">Ractive</div></a><br/>
-</div>
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
+    <header>  
+        <button class="accordion">Menu</button>
+        <div class="panel">
+            <a href="index.html"><div class="menuLink">Home</div></a><br/>
+            <a href="slider.html"><div class="menuLink">Slider</div></a><br/>
+            <a href="gps.html"><div class="menuLink">GPS</div></a><br/>
+            <a href="vibration.html"><div class="menuLink">Vibration</div></a><br/>
+            <a href="ractive.html"><div class="menuLink">Ractive</div></a><br/>
+        </div>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
-  }
-}
-</script>
-<br/><br/>
-<h1>HACE - Slider</h1>
-</header>
-<div class="container">
-<h2>Description</h2>
-<p>This code will help you to create a simple slider as seen below.</p><br/>
-<p>If you would like to use example code in your own application I highly recommend this website, <a class="websiteLink" href="http://www.freebits.co.uk/convert-html-code-to-text.html">freebits</a> it turns code to text for you.</a></p><br/>
-<h2>Code</h2>
-   &lt;form&gt;<br />
-      &lt;label for="slide"&gt;Slide:&lt;/label&gt;<br />
-      &lt;input type="range" name="slide" id="slide" value="50" min="0" max="100"&gt;<br />
-    &lt;/form&gt;<br/>
-<br/><br/>
-<h2>Example</h2>
-<form>
-<label for="slide">Slide:</label>
-<input type="range" name="slide" id="slide" value="50" min="0" max="100">
-</form>
-</div>
-<footer>
-<h5>HACE</h5>
-<p>Created by Aaron Seymour</p>
-</footer>
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function(){
+                    this.classList.toggle("active");
+                    this.nextElementSibling.classList.toggle("show");
+                }
+            }
+        </script>
+        <br/><br/>
+        <h1>HACE - Slider</h1>
+    </header>
+    <div class="container">
+        <h2>Description</h2>
+        <p>This code will help you to create a simple slider as seen below.</p><br/>
+        <p>If you would like to use example code in your own application I highly recommend this website, <a class="websiteLink" href="http://www.freebits.co.uk/convert-html-code-to-text.html">freebits</a> it turns code to text for you.</a></p><br/>
+        <h2>Code</h2>
+        &lt;form&gt;<br />
+        &lt;label for="slide"&gt;Slide:&lt;/label&gt;<br />
+        &lt;input type="range" name="slide" id="slide" value="50" min="0" max="100"&gt;<br />
+        &lt;/form&gt;<br/>
+        <br/><br/>
+        <h2>Example</h2>
+        <form>
+            <label for="slide">Slide:</label>
+            <input type="range" name="slide" id="slide" value="50" min="0" max="100">
+        </form>
+    </div>
+    <footer>
+        <h5>HACE</h5>
+        <p>Created by Aaron Seymour</p>
+    </footer>
 </body>
 </html> 
