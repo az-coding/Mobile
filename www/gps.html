@@ -36,16 +36,14 @@ for (i = 0; i < acc.length; i++) {
 
 <!-- GPS code taken and adapted from http://www.w3schools.com/html/html5_geolocation.asp -->
 <h2>Example</h2>
-<p id="demo">Click the button to get your position.</p>
-<button onclick="getLocation()">Try It</button>
+<p id="coordinates">To get your position click on the button below.</p>
+<button onclick="getLocation()">Get my position</button>
 <div id="mapholder"></div>
 <script>
-var x = document.getElementById("demo");
+var x = document.getElementById("coordinates");
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
 function showPosition(position) {
