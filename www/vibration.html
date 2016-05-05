@@ -39,25 +39,25 @@ for (i = 0; i < acc.length; i++) {
 
 <!-- Code learnt and adapted from https://www.youtube.com/watch?v=u7sgjSPIFFI -->
 <h2>Example</h2>
-<button id="one" class="vibrationButton">One Second Vibration</button><br/>
+<button id="one" class="vibrationButton">1 Second Vibration</button><br/>
 <button id="pattern" class="vibrationButton">Vibration Pattern</button><br/>
-<button id="ten" class="vibrationButton">10 Second Vibration</button><br/>
+<button id="five" class="vibrationButton">5 Second Vibration</button><br/>
 <button id="stop" class="vibrationButton">Stop All Vibrations</button><br/>
- <script>
+<script>
         $(document).ready(function () {
-            // One second vibration
+            // vibrates for 1 second
             $('#one').click(function () {
                 navigator.vibrate(1000);
             });
-            // Vibration pattern
+            // Vibrates in a pattern
             $('#pattern').click(function () {
-                navigator.vibrate([500, 100, 250, 100, 1000]);
+                navigator.vibrate([300, 200, 400, 100, 800]);
             });
-            // 10 second vibration
-            $('#ten').click(function () {
-                navigator.vibrate(10000);
+            // vibrates for 5 second
+            $('#five').click(function () {
+                navigator.vibrate(5000);
             });
-            // Stop all vibrations
+            // Stops all of the vibrations
             $('#stop').click(function () {
                 navigator.vibrate(0);
             });
