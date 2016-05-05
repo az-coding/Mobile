@@ -33,7 +33,39 @@ for (i = 0; i < acc.length; i++) {
 <p>This code will help you to create a static GPS, you can see an example below.<p/> 
 <p>*Please note you will need to add this &lt;plugin name="org.apache.cordova.geolocation" spec="0.3.12" source="pgb"&gt; within the config file</p><br/>
 <h2>Code</h2>
-
+&lt;p id="coordinates"&gt;To get your position click on the button below.&lt;/p&gt;<br />
+&lt;button onclick="getLocation()"&gt;Get my position&lt;/button&gt;<br />
+&lt;div id="mapholder"&gt;&lt;/div&gt;<br />
+&lt;script&gt;<br />
+var x = document.getElementById("coordinates");<br />
+function getLocation() {<br />
+    if (navigator.geolocation) {<br />
+        navigator.geolocation.getCurrentPosition(showPosition, showError);<br />
+    }<br />
+}<br />
+function showPosition(position) {<br />
+    var latlon = position.coords.latitude + "," + position.coords.longitude;<br />
+    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="<br />
+    +latlon+"&amp;zoom=14&amp;size=250x250&amp;sensor=false";<br />
+    document.getElementById("mapholder").innerHTML = "&lt;img src='"+img_url+"'&gt;";<br />
+}<br />
+function showError(error) {<br />
+    switch(error.code) {<br />
+        case error.PERMISSION_DENIED:<br />
+            x.innerHTML = "User denied the request for Geolocation."<br />
+            break;<br />
+        case error.POSITION_UNAVAILABLE:<br />
+            x.innerHTML = "Location information is unavailable."<br />
+            break;<br />
+        case error.TIMEOUT:<br />
+            x.innerHTML = "The request to get user location timed out."<br />
+            break;<br />
+        case error.UNKNOWN_ERROR:<br />
+            x.innerHTML = "An unknown error occurred."<br />
+            break;<br />
+    }<br />
+}<br />
+&lt;/script&gt;
 <!-- GPS code taken and adapted from http://www.w3schools.com/html/html5_geolocation.asp -->
 <h2>Example</h2>
 <p id="coordinates">To get your position click on the button below.</p>
