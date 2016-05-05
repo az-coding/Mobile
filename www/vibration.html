@@ -36,7 +36,30 @@ for (i = 0; i < acc.length; i++) {
 <p>Learn how to utilize the vibration function for your mobile device below.</p>
 <p>Click on each button to witness the vibration functions. *Please note you will need to add this &lt;plugin name="org.apache.cordova.vibration" spec="0.3.13" source="pgb"&gt; within the config file</p><br/>
 <h2>Code</h2>
-
+&lt;button id="one" class="vibrationButton"&gt;1 Second Vibration&lt;/button&gt;&lt;br/&gt;<br />
+&lt;button id="pattern" class="vibrationButton"&gt;Vibration Pattern&lt;/button&gt;&lt;br/&gt;<br />
+&lt;button id="five" class="vibrationButton"&gt;5 Second Vibration&lt;/button&gt;&lt;br/&gt;<br />
+&lt;button id="stop" class="vibrationButton"&gt;Stop All Vibrations&lt;/button&gt;&lt;br/&gt;<br />
+&lt;script&gt;<br />
+        $(document).ready(function () {<br />
+            // vibrates for 1 second<br />
+            $('#one').click(function () {<br />
+                navigator.vibrate(1000);<br />
+            });<br />
+            // Vibrates in a pattern<br />
+            $('#pattern').click(function () {<br />
+                navigator.vibrate([300, 200, 400, 100, 800]);<br />
+            });<br />
+            // vibrates for 5 second<br />
+            $('#five').click(function () {<br />
+                navigator.vibrate(5000);<br />
+            });<br />
+            // Stops all of the vibrations<br />
+            $('#stop').click(function () {<br />
+                navigator.vibrate(0);<br />
+            });<br />
+        });<br />
+&lt;/script&gt;
 <!-- Code learnt and adapted from https://www.youtube.com/watch?v=u7sgjSPIFFI -->
 <h2>Example</h2>
 <button id="one" class="vibrationButton">1 Second Vibration</button><br/>
