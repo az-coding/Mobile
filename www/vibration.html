@@ -1,96 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>HACE</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
+    <title>HACE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
-<header>  
-<button class="accordion">Menu</button>
-<div class="panel">
-<a href="index.html"><div class="menuLink">Home</div></a><br/>
-<a href="slider.html"><div class="menuLink">Slider</div></a><br/>
-<a href="gps.html"><div class="menuLink">GPS</div></a><br/>
-<a href="vibration.html"><div class="menuLink">Vibration</div></a><br/>
-<a href="ractive.html"><div class="menuLink">Ractive</div></a><br/>
-</div>
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
+    <header>  
+        <button class="accordion">Menu</button>
+        <div class="panel">
+            <a href="index.html"><div class="menuLink">Home</div></a><br/>
+            <a href="slider.html"><div class="menuLink">Slider</div></a><br/>
+            <a href="gps.html"><div class="menuLink">GPS</div></a><br/>
+            <a href="vibration.html"><div class="menuLink">Vibration</div></a><br/>
+            <a href="ractive.html"><div class="menuLink">Ractive</div></a><br/>
+        </div>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
-  }
-}
-</script>
-<br/><br/>
-<h1>HACE - Vibration</h1>
-</header>
-<div class="container">
-    <h2>Description</h2>
-<p>Learn how to utilize the vibration function for your mobile device below.</p>
-<p>Click on each button to witness the vibration functions. *Please note you will need to add this &lt;plugin name="org.apache.cordova.vibration" spec="0.3.13" source="pgb"&gt; within the config file</p><br/>
-<h2>Code</h2>
-&lt;button id="one" class="vibrationButton"&gt;1 Second Vibration&lt;/button&gt;&lt;br/&gt;<br />
-&lt;button id="pattern" class="vibrationButton"&gt;Vibration Pattern&lt;/button&gt;&lt;br/&gt;<br />
-&lt;button id="five" class="vibrationButton"&gt;5 Second Vibration&lt;/button&gt;&lt;br/&gt;<br />
-&lt;button id="stop" class="vibrationButton"&gt;Stop All Vibrations&lt;/button&gt;&lt;br/&gt;<br />
-&lt;script&gt;<br />
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function(){
+                    this.classList.toggle("active");
+                    this.nextElementSibling.classList.toggle("show");
+                }
+            }
+        </script>
+        <br/><br/>
+        <h1>HACE - Vibration</h1>
+    </header>
+    <div class="container">
+        <h2>Description</h2>
+        <p>Learn how to utilize the vibration function for your mobile device below.</p>
+        <p>Click on each button to witness the vibration functions. *Please note you will need to add this &lt;plugin name="org.apache.cordova.vibration" spec="0.3.13" source="pgb"&gt; within the config file</p><br/>
+        <h2>Code</h2>
+        &lt;button id="one" class="vibrationButton"&gt;1 Second Vibration&lt;/button&gt;&lt;br/&gt;<br />
+        &lt;button id="pattern" class="vibrationButton"&gt;Vibration Pattern&lt;/button&gt;&lt;br/&gt;<br />
+        &lt;button id="five" class="vibrationButton"&gt;5 Second Vibration&lt;/button&gt;&lt;br/&gt;<br />
+        &lt;button id="stop" class="vibrationButton"&gt;Stop All Vibrations&lt;/button&gt;&lt;br/&gt;<br />
+        &lt;script&gt;<br />
         $(document).ready(function () {<br />
-            // vibrates for 1 second<br />
-            $('#one').click(function () {<br />
-                navigator.vibrate(1000);<br />
-            });<br />
-            // Vibrates in a pattern<br />
-            $('#pattern').click(function () {<br />
-                navigator.vibrate([300, 200, 400, 100, 800]);<br />
-            });<br />
-            // vibrates for 5 second<br />
-            $('#five').click(function () {<br />
-                navigator.vibrate(5000);<br />
-            });<br />
-            // Stops all of the vibrations<br />
-            $('#stop').click(function () {<br />
-                navigator.vibrate(0);<br />
-            });<br />
+        // vibrates for 1 second<br />
+        $('#one').click(function () {<br />
+        navigator.vibrate(1000);<br />
         });<br />
-&lt;/script&gt;
-<!-- Code learnt and adapted from https://www.youtube.com/watch?v=u7sgjSPIFFI -->
-<br/><br/>
-<h2>Example</h2>
-<button id="one" class="vibrationButton">1 Second Vibration</button><br/>
-<button id="pattern" class="vibrationButton">Vibration Pattern</button><br/>
-<button id="five" class="vibrationButton">5 Second Vibration</button><br/>
-<button id="stop" class="vibrationButton">Stop All Vibrations</button><br/>
-<script>
-        $(document).ready(function () {
-            // vibrates for 1 second
-            $('#one').click(function () {
-                navigator.vibrate(1000);
+        // Vibrates in a pattern<br />
+        $('#pattern').click(function () {<br />
+        navigator.vibrate([300, 200, 400, 100, 800]);<br />
+        });<br />
+        // vibrates for 5 second<br />
+        $('#five').click(function () {<br />
+        navigator.vibrate(5000);<br />
+        });<br />
+        // Stops all of the vibrations<br />
+        $('#stop').click(function () {<br />
+        navigator.vibrate(0);<br />
+        });<br />
+        });<br />
+        &lt;/script&gt;
+        <!-- Code learnt and adapted from https://www.youtube.com/watch?v=u7sgjSPIFFI -->
+        <br/><br/>
+        <h2>Example</h2>
+        <button id="one" class="vibrationButton">1 Second Vibration</button><br/>
+        <button id="pattern" class="vibrationButton">Vibration Pattern</button><br/>
+        <button id="five" class="vibrationButton">5 Second Vibration</button><br/>
+        <button id="stop" class="vibrationButton">Stop All Vibrations</button><br/>
+        <script>
+            $(document).ready(function () {
+                // vibrates for 1 second
+                $('#one').click(function () {
+                    navigator.vibrate(1000);
+                });
+                // Vibrates in a pattern
+                $('#pattern').click(function () {
+                      navigator.vibrate([300, 200, 400, 100, 800]);
+                });
+                // vibrates for 5 second
+                $('#five').click(function () {
+                    navigator.vibrate(5000);
+                });
+                // Stops all of the vibrations
+                $('#stop').click(function () {
+                    navigator.vibrate(0);
+                });
             });
-            // Vibrates in a pattern
-            $('#pattern').click(function () {
-                navigator.vibrate([300, 200, 400, 100, 800]);
-            });
-            // vibrates for 5 second
-            $('#five').click(function () {
-                navigator.vibrate(5000);
-            });
-            // Stops all of the vibrations
-            $('#stop').click(function () {
-                navigator.vibrate(0);
-            });
-        });
-</script>
+        </script>
 </div>
 <footer>
-<h5>HACE</h5>
-<p>Created By Aaron Seymour</p>
+    <h5>HACE</h5>
+    <p>Created By Aaron Seymour</p>
 </footer>   
 </body>
 </html>
