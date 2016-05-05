@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>HACE</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="style.css">
+    <title>HACE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<header>  
-<button class="accordion">Menu</button>
-<div class="panel">
-<a href="index.html"><div class="menuLink">Home</div></a><br/>
-<a href="slider.html"><div class="menuLink">Slider</div></a><br/>
-<a href="gps.html"><div class="menuLink">GPS</div></a><br/>
-<a href="vibration.html"><div class="menuLink">Vibration</div></a><br/>
-<a href="ractive.html"><div class="menuLink">Ractive</div></a><br/>
-</div>
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
+    <header>  
+        <button class="accordion">Menu</button>
+        <div class="panel">
+            <a href="index.html"><div class="menuLink">Home</div></a><br/>
+            <a href="slider.html"><div class="menuLink">Slider</div></a><br/>
+            <a href="gps.html"><div class="menuLink">GPS</div></a><br/>
+            <a href="vibration.html"><div class="menuLink">Vibration</div></a><br/>
+            <a href="ractive.html"><div class="menuLink">Ractive</div></a><br/>
+        </div>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
-  }
-}
-</script>
-<br/><br/>
-<h1>Hace - Home</h1>
-</header>
-<div class="container">
-    <h2>Welcome to HACE</h2>
-<p>We will provide you with a few Coding Examples you need for creating your very own Hybrid Application.</p>
-</div>
-<footer>
-<h5>HACE</h5>
-<p>Created By Aaron Seymour</p>
-</footer>
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function(){
+                    this.classList.toggle("active");
+                    this.nextElementSibling.classList.toggle("show");
+                }
+            }
+        </script>
+        <br/><br/>
+        <h1>Hace - Home</h1>
+    </header>
+    <div class="container">
+        <h2>Welcome to HACE</h2>
+        <p>We will provide you with a few Coding Examples you need for creating your very own Hybrid Application.</p>
+    </div>
+    <footer>
+        <h5>HACE</h5>
+        <p>Created By Aaron Seymour</p>
+    </footer>
 </body>
 </html> 
